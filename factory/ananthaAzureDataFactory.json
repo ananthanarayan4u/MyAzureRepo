@@ -1,0 +1,9 @@
+{
+	"name": "ananthaAzureDataFactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1bcd5dda-97d5-47fc-9274-5b0f0802dd76",
+		"tenantId": "982543b5-d10c-4c4d-b128-26ce11d3db5c"
+	}
+}
