@@ -1,5 +1,5 @@
 {
-	"name": "NewPipeline",
+	"name": "TestDataGenerator",
 	"properties": {
 		"activities": [
 			{
