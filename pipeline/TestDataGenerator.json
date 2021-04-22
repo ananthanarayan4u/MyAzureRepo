@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"mainClassName": "com.telstra.ddg.GenerateTestData",
 					"parameters": [
-						"AD_ClosedTasksReport  ACMA"
+						"AD_ClosedTasksReport ACMA"
 					],
 					"libraries": [
 						{
