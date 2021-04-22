@@ -21,7 +21,7 @@
 					],
 					"libraries": [
 						{
-							"jar": "dbfs:/FileStore/tables/DDGTestDataGeneratorApp-1.0-SNAPSHOT.jar"
+							"jar": "dbfs:/FileStore/tables/DDGTestDataGeneratorApp-1.0.jar"
 						}
 					]
 				},
