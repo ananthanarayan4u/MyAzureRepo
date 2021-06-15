@@ -18,7 +18,8 @@
 					"mainClassName": "main.py",
 					"parameters": [
 						"AD_ClosedTasksReport",
-						"ACMA"
+						"ACMA",
+						"Local"
 					],
 					"libraries": [
 						{
