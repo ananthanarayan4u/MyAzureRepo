@@ -15,14 +15,14 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"mainClassName": "com.telstra.ddg.GenerateTestData",
+					"mainClassName": "",
 					"parameters": [
 						"AD_ClosedTasksReport",
 						"ACMA"
 					],
 					"libraries": [
 						{
-							"jar": "dbfs:/FileStore/tables/DDGTestDataGeneratorApp.jar"
+							"jar": "dbfs:/FileStore/tables/TestDataGeneratorPython.jar"
 						}
 					]
 				},
@@ -30,19 +30,6 @@
 					"referenceName": "AzureDataBricksLinkedService",
 					"type": "LinkedServiceReference"
 				}
-			},
-			{
-				"name": "TestDataGeneratorPythonPGM",
-				"type": "DatabricksSparkPython",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": []
 			}
 		],
 		"annotations": []
