@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "TestDataGenerator1",
+				"name": "PythonTestDataGenerator",
 				"type": "DatabricksSparkJar",
 				"dependsOn": [],
 				"policy": {
@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"mainClassName": "",
+					"mainClassName": "main.py",
 					"parameters": [
 						"AD_ClosedTasksReport",
 						"ACMA"
