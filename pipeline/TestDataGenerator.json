@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "TestDataGenerator",
+				"name": "TestDataGenerator1",
 				"type": "DatabricksSparkJar",
 				"dependsOn": [],
 				"policy": {
