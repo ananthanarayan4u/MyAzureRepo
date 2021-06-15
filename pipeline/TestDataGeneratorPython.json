@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"pythonFile": "dbfs:/FileStore/tables/main.py",
+					"pythonFile": "dbfs:/FileStore/tables/mainFunction.py",
 					"parameters": [
 						"AD_ClosedTasksReport",
 						"ACMA",
