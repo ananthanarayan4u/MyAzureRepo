@@ -52,7 +52,12 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"pythonFile": "dbfs:/FileStore/tables/main.py"
+					"pythonFile": "dbfs:/FileStore/tables/main.py",
+					"parameters": [
+						"AD_ClosedTasksReport",
+						"ACMA",
+						"Local"
+					]
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDataBricksLinkedService",
