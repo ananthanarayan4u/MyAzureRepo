@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"mainClassName": "main.py",
+					"mainClassName": "src/main.py",
 					"parameters": [
 						"AD_ClosedTasksReport",
 						"ACMA",
