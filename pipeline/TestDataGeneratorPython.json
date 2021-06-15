@@ -3,43 +3,6 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "PythonTestDataGenerator",
-				"type": "DatabricksSparkJar",
-				"dependsOn": [
-					{
-						"activity": "PythonSpark",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"mainClassName": "src/main",
-					"parameters": [
-						"AD_ClosedTasksReport",
-						"ACMA",
-						"Local"
-					],
-					"libraries": [
-						{
-							"jar": "dbfs:/FileStore/tables/TestDataGeneratorPython.jar"
-						}
-					]
-				},
-				"linkedServiceName": {
-					"referenceName": "AzureDataBricksLinkedService",
-					"type": "LinkedServiceReference"
-				}
-			},
-			{
 				"name": "PythonSpark",
 				"type": "DatabricksSparkPython",
 				"dependsOn": [],
