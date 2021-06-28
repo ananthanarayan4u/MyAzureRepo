@@ -1,0 +1,21 @@
+{
+	"name": "AWSData_Set",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkedServicetoAWS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "userdetails",
+				"folderPath": "user_data_20210625/",
+				"fileName": "userdata1.parquet"
+			},
+			"compressionCodec": "none"
+		},
+		"schema": []
+	}
+}
