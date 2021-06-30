@@ -3,9 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Files from AWS to Azure",
-				"description": "This ADF COPY activity copies the files from AWS to Azure.",
-				"type": "Copy",
+				"name": "Get MetadatafromS3",
+				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -16,22 +15,16 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"source": {
-						"type": "ParquetSource",
-						"storeSettings": {
-							"type": "AmazonS3ReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
-						}
-					},
-					"enableStaging": false
-				},
-				"inputs": [
-					{
+					"dataset": {
 						"referenceName": "AWSData_Set",
 						"type": "DatasetReference"
+					},
+					"fieldList": [],
+					"storeSettings": {
+						"type": "AmazonS3ReadSettings",
+						"enablePartitionDiscovery": false
 					}
-				]
+				}
 			}
 		],
 		"folder": {
