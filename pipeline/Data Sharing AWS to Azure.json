@@ -20,6 +20,8 @@
 						"storeSettings": {
 							"type": "AmazonS3ReadSettings",
 							"recursive": true,
+							"wildcardFolderPath": "user_data_20210625",
+							"wildcardFileName": "userdata*.parquet",
 							"enablePartitionDiscovery": false
 						}
 					},
