@@ -3,8 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Get MetadatafromS3",
-				"type": "GetMetadata",
+				"name": "Copy data from Amazon S3 to ADLS",
+				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -15,18 +15,45 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
+					"source": {
+						"type": "ParquetSource",
+						"storeSettings": {
+							"type": "AmazonS3ReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						}
+					},
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "ParquetWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
 						"referenceName": "AWSData_Set",
 						"type": "DatasetReference"
-					},
-					"fieldList": [
-						"itemName"
-					],
-					"storeSettings": {
-						"type": "AmazonS3ReadSettings",
-						"enablePartitionDiscovery": false
 					}
-				}
+				],
+				"outputs": [
+					{
+						"referenceName": "DataSetADLS",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"folder": {
