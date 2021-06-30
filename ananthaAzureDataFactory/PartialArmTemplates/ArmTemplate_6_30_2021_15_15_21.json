@@ -1,0 +1,36 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "ananthaAzureDataFactory"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/LinkedServicetoAWS')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "This is the Linked Service Created for connecting AWS and getting the files from S3 Bucket",
+				"annotations": [],
+				"type": "AmazonS3",
+				"typeProperties": {
+					"serviceUrl": "https://s3.ap-southeast-2.amazonaws.com",
+					"accessKeyId": "AKIAQKYYQHRTSXJUSYPL",
+					"secretAccessKey": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"authenticationType": "AccessKey"
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
