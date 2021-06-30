@@ -11,8 +11,7 @@
 			"location": {
 				"type": "AmazonS3Location",
 				"bucketName": "/userdetails",
-				"folderPath": "user_data_20210625/",
-				"fileName": "userdata1.parquet"
+				"folderPath": "user_data_20210625/"
 			},
 			"compressionCodec": "none"
 		},
