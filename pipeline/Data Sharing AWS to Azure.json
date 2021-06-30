@@ -19,7 +19,9 @@
 						"referenceName": "AWSData_Set",
 						"type": "DatasetReference"
 					},
-					"fieldList": [],
+					"fieldList": [
+						"itemName"
+					],
 					"storeSettings": {
 						"type": "AmazonS3ReadSettings",
 						"enablePartitionDiscovery": false
