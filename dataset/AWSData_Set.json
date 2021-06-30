@@ -11,7 +11,8 @@
 			"location": {
 				"type": "AmazonS3Location",
 				"bucketName": "userdetails",
-				"folderPath": "user_data_20210625"
+				"folderPath": "user_data_20210625",
+				"fileName": "*/*"
 			},
 			"compressionCodec": "none"
 		},
