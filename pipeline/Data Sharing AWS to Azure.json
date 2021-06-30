@@ -35,6 +35,20 @@
 						}
 					},
 					"enableStaging": false,
+					"validateDataConsistency": true,
+					"logSettings": {
+						"enableCopyActivityLog": true,
+						"copyActivityLogSettings": {
+							"logLevel": "Warning",
+							"enableReliableLogging": false
+						},
+						"logLocationSettings": {
+							"linkedServiceName": {
+								"referenceName": "AzureDataLakeStorageLinkedService",
+								"type": "LinkedServiceReference"
+							}
+						}
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"typeConversion": true,
