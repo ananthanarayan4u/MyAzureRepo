@@ -72,8 +72,8 @@
 				]
 			},
 			{
-				"name": "Notebook1",
-				"type": "DatabricksNotebook",
+				"name": "Jar1",
+				"type": "DatabricksSparkJar",
 				"dependsOn": [
 					{
 						"activity": "Copy data from Amazon S3 to ADLS",
