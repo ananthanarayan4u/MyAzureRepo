@@ -1,0 +1,20 @@
+{
+	"name": "Data Flow for creating Delta",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DataSetADLS",
+						"type": "DatasetReference"
+					},
+					"name": "parquetdatafromADLS"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'parquet') ~> parquetdatafromADLS"
+		}
+	}
+}
