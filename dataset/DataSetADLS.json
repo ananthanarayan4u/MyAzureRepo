@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Sales.parquet",
-				"folderPath": "datasource/dataset/Account",
+				"fileName": "Sales.csv",
+				"folderPath": "datasource/dataset/csv_files",
 				"fileSystem": "mycontainer01"
 			},
 			"compressionCodec": "none"
