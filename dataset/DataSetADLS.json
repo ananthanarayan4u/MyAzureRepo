@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "Sales.parquet",
 				"folderPath": "datasource/dataset/Account",
 				"fileSystem": "mycontainer01"
 			},
