@@ -12,7 +12,7 @@
 				"type": "AmazonS3Location",
 				"bucketName": "userdetails",
 				"folderPath": "user_data_20210625",
-				"fileName": "Sales.csv"
+				"fileName": "userdata1.parquet"
 			},
 			"compressionCodec": "none"
 		},
