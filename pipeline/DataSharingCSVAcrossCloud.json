@@ -16,13 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "ParquetSource",
+						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AmazonS3ReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "user_data_20210625",
-							"wildcardFileName": "*.*",
 							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -60,7 +61,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "AWSData_Set",
+						"referenceName": "DelimitedText",
 						"type": "DatasetReference"
 					}
 				],
