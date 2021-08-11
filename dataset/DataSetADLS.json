@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Sales.csv",
 				"folderPath": "datasource/dataset/csv_files",
 				"fileSystem": "mycontainer01"
 			},
