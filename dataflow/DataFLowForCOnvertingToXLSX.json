@@ -12,9 +12,17 @@
 					"name": "ExcelDatafromAWS"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorageLinkedService",
+						"type": "LinkedServiceReference"
+					},
+					"name": "CSVFileforADLS"
+				}
+			],
 			"transformations": [],
-			"script": "source(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\twildcardPaths:['*.xlsx']) ~> ExcelDatafromAWS"
+			"script": "source(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\twildcardPaths:['*.xlsx']) ~> ExcelDatafromAWS\nExcelDatafromAWS sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tformat: 'delimited',\n\tcolumnDelimiter: ',',\n\tescapeChar: '\\\\',\n\tquoteChar: '\\\"',\n\tcolumnNamesAsHeader: false,\n\tumask: 0022,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> CSVFileforADLS"
 		}
 	}
 }
