@@ -1,0 +1,20 @@
+{
+	"name": "DataFLowForCOnvertingToXLSX",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DataSetExcelfromAWS",
+						"type": "DatasetReference"
+					},
+					"name": "ExcelDatafromAWS"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "source(output(\n\t\tColumn_1 as string,\n\t\tColumn_2 as string,\n\t\tColumn_3 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\twildcardPaths:['*.xlsx']) ~> ExcelDatafromAWS"
+		}
+	}
+}
