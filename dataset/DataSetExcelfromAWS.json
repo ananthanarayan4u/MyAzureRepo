@@ -1,0 +1,31 @@
+{
+	"name": "DataSetExcelfromAWS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LinkedServicetoAWS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Emplyee Data",
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "userdetails",
+				"folderPath": "user_data_20210625",
+				"fileName": "Employee_Dept_Data.xlsx"
+			}
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}
