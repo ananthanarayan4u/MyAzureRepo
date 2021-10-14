@@ -78,7 +78,7 @@
 					{
 						"activity": "Copy data from Amazon S3 to ADLS",
 						"dependencyConditions": [
-							"Succeeded"
+							"Skipped"
 						]
 					}
 				],
