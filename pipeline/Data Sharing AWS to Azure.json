@@ -70,26 +70,6 @@
 						"type": "DatasetReference"
 					}
 				]
-			},
-			{
-				"name": "Jar1",
-				"type": "DatabricksSparkJar",
-				"dependsOn": [
-					{
-						"activity": "Copy data from Amazon S3 to ADLS",
-						"dependencyConditions": [
-							"Skipped"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": []
 			}
 		],
 		"folder": {
