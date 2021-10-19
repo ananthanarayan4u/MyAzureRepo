@@ -1,6 +1,11 @@
 {
 	"name": "DQ_Validations_EDGE",
 	"properties": {
+		"parameters": {
+			"Source System": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
